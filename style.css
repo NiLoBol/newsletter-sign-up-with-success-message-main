@@ -1,0 +1,140 @@
+@font-face {
+  font-family: Font1;
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  /* Additional font properties */
+}
+@font-face {
+  font-family: Font2;
+  src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  /* Additional font properties */
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Orange:hsl(23, 100%, 67%);
+  --Tomatobg: hsl(4, 100%, 95%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  font-family: Font1, Arial, sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--CharcoalGrey);
+}
+.card-content {
+  width: 50vw;
+  border: 0px solid var(--DarkSlateGrey) !important;
+  background-color: var(--White);
+  border-radius: 25px;
+}
+.card-content2 {
+  width: 25vw;
+  border: 0px solid var(--DarkSlateGrey) !important;
+  background-color: var(--White);
+  border-radius: 25px;
+}
+li {
+
+  list-style-image: url("assets/images/icon-list.svg");
+  padding-left: 30px;
+  vertical-align: top;
+  background-position: center left;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+input.form-control:focus{
+  border: 1px solid #ced4da !important;
+  box-shadow: none !important;
+}
+input.form-control.error:focus{
+  border: 1px solid var(--Tomato) !important;
+  box-shadow: none !important;
+}
+.form-control.error{
+  border: 1px solid var(--Tomato) !important;
+  background-color: var(--Tomatobg);
+  color: var(--Tomato);
+  box-shadow: none !important;
+
+}
+#valid{
+  float: right;
+  color: var(--Tomato);
+  display: none;
+}
+.btn-primary2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--CharcoalGrey);
+  color: var(--White);
+  height: 50px;
+  border: none;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  color: var(--White) !important;
+  background-color: var(--CharcoalGrey) !important; 
+  border-color: var(--CharcoalGrey) !important;
+}
+.btn:first-child:hover, :not(.btn-check)+.btn:hover {
+  color: var(--White) !important;
+  background-image: linear-gradient( 45deg, var(--Tomato), var(--Orange)) !important;
+  border-color: var(--CharcoalGrey) !important;
+}
+input{
+  height: 50px;
+}
+h1{
+  font-family: Font2, Arial, sans-serif;
+  font-size: 55px;
+  font-weight: 900;
+}
+.font-weight-bold{
+  font-weight: 700;
+}
+.valid{
+  font-size: 0.8rem;
+}
+@media (max-width: 500px) {
+  h1{
+    font-size: 40px;
+    font-weight: 900;
+  }
+  .order-xl-2 {
+    flex: 0 0 100%; /* ให้ขนาดเต็มหน้าจอเมื่อเป็นมือถือ */
+    max-width: 100%; /* ให้ความกว้างเต็มหน้าจอเมื่อเป็นมือถือ */
+    order: 2; /* เปลี่ยนลำดับเพื่อให้ข้อมูลข่าวสารอยู่ด้านล่างเมื่อเป็นมือถือ */
+  }
+  body{
+    background-color: var(--White);
+  }
+  .order-xl-1 {
+    flex: 0 0 100%; /* ให้ขนาดเต็มหน้าจอเมื่อเป็นมือถือ */
+    max-width: 100%; /* ให้ความกว้างเต็มหน้าจอเมื่อเป็นมือถือ */
+    order: 1; /* เปลี่ยนลำดับเพื่อให้รูปอยู่ด้านบนเมื่อเป็นมือถือ */
+  }
+  .card-content{
+     width: 100vw;
+     height: 100vh;
+     border-radius: 0px;
+  }
+  .card-content2 {
+    padding-top: 20vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--White);
+  }
+  #submit2{
+    margin-top: 20vh !important;
+    border: none;
+  }
+}
